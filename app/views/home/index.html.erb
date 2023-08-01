@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="content">
+      <h2><%=@greeting %></h2>
+      <p>This is a simple home page for your Ruby on Rails application.</p>
+      <p>Feel free to modify this page and start building your app!</p>
+    </div>
+    <!-- Example using an instance variable in a view -->
+    <h5>Example for Looping</h5>
+    <% @fruits.each do |fruit| %>
+        <p>I like <%= fruit %></p>
+    <% end %>
+    <!-- app/views/home/index.html.erb -->
+
+    <h2>Example for Api calling</h2>
+    <% if @data %>
+    <h3>Data from the API:</h3>
+    <ul>
+      <% @data.each do |item| %>
+        <li><%= item['name'] %></li>
+      <% end %>
+    </ul>
+    <% elsif @error_message %>
+        <h1>Error:</h1>
+        <p><%= @error_message %></p>
+    <% end %>
+    <button id="my-button">Click Me!</button>
+
+  </div>
